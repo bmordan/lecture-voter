@@ -2,6 +2,8 @@
 Lecture Voter
 =============
 
+![enter image description here](http://lecture-voter.herokuapp.com/img/splash-image.svg)
+
 Makers Academy decided to run a 3 day hackerthon.
 
 Our team was given the challenge of creating a lecture voting app.
