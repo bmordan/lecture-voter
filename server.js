@@ -24,18 +24,16 @@ server.get('/vote', function (req, res) {
 
 http.listen(port, function() {
   console.log('Time to vote at ' + port)
-})
+});
 
 module.exports = http;
 
 io.on('connection', function(connection) {
-  
-  console.log("NEW CONNECTION")
+
   voter = new Voter(connection);
   lecture.addVoter(voter);
-  console.log(lecture.voters)
-  
-  io.sockets.emit('update voter count', {countVoters: lecture.countVoters()})
+
+  io.sockets.emit('update voter count', {countVoters: lecture.countVoters()});
 
   voter.connection.on('userVote', function(data) {
     var userVote = data.userVote
@@ -44,10 +42,8 @@ io.on('connection', function(connection) {
   });
 
   voter.connection.on('disconnect', function() {
-    console.log("DISCONECT")
-    lecture.removeVoter(voter)
-    console.log(lecture.voters)
-    io.sockets.emit('update voter count', {countVoters: lecture.countVoters()})
+    lecture.removeVoter(voter);
+    io.sockets.emit('update voter count', {countVoters: lecture.countVoters()});
   });
 
 });

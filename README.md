@@ -1,11 +1,12 @@
+[![Code Climate](https://codeclimate.com/github/bmordan/lecture-voter/badges/gpa.svg)](https://codeclimate.com/github/bmordan/lecture-voter)
 Lecture Voter
 =============
 
-Makers Academy decided to run a 3 day hackerthon. 
+Makers Academy decided to run a 3 day hackerthon.
 
 Our team was given the challenge of creating a lecture voting app.
 
-We tackled the problem using JavaScript and Node, with thorough testing in Mocha, Chai and Zombie. 
+We tackled the problem using JavaScript and Node, with thorough testing in Mocha, Chai and Zombie.
 
 The app allows users to vote (+/-) while live streaming the collective results in the form of a graph.
 
